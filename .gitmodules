@@ -1,0 +1,3 @@
+[submodule "joystick_control"]
+	path = joystick_control
+	url = git@github.com:VIMe531/joystick_control.git
