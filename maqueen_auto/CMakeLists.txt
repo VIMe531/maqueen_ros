@@ -30,7 +30,9 @@ endif()
 add_executable(scan_timesync_node src/scan_timesync_node.cpp)
 ament_target_dependencies(scan_timesync_node rclcpp sensor_msgs)
 
-install(DIRECTORY launch config DESTINATION lib/${PROJECT_NAME})
-install(TARGETS scan_timesync_node RUNTIME DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME})
+install(TARGETS scan_timesync_node
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
