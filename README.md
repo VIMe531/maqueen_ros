@@ -18,8 +18,38 @@ ATOM Liteをご使用の際には、Atom/maqueen_urosを、ATOM S3をご使用�
 
 それぞれの違いは、モータの回転方向を表すCW・CCWに格納されている数値の違いです。
 
-最近発売された、Maqueen Pro V3、Maqueen Lite V5については動作確認を行っておりませんが、
+最近発売された、Maqueen Plus V3、Maqueen Lite V5については動作確認を行っておりませんが、
 従来製品と同様、CW・CCWの数値を変えることでモータを制御することができるものと考えられます。
+
+## インストール
+まずROS2ワークスペースのsrcフォルダへ移動します。
+
+```
+cd ~/ros2_ws/src
+```
+
+リポジトリをクローンします。
+
+```
+git clone --recursive https://github.com/VIMe531/maqueen_ros.git
+```
+
+ROS2パッケージをビルドします。使用するのは、joystick_controlなので、joystick_controlを指定します。
+
+```
+cd ~/ros2_ws
+colcon build --packages-select joystick_control
+```
+
+## 使い方
+micro-ROS関連の設定を行ったら、ロボットに電源を入れ、以下のコマンドを打ち込みます。
+
+```
+ros2 run micro_ros_agent micro_ros_agent udp4 -p 8888
+ros2 run joy joy_node
+ros2 run joystick_control joy_to_cmdvel
+```
+
 
 ## 関連ドキュメント
 [micro:Maqueen PLUS Wiki](https://wiki.dfrobot.com/SKU_MBT0021-EN_Maqueen_Plus_STEAM_Programming_Educational_Robot "maqueen plus") 
