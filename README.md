@@ -1,14 +1,18 @@
 # maqueen_ros
 スイッチサイエンスマガジンの、[こちらの記事](https://www.switch-science.com/blogs/magazine/maqueen-m5stack-ros2 "ssci magazine")にて使用されているコードです。
+
 第1回では、Atomディレクトリ内のコードを使用しています。他ディレクトリは作業中です。気長にお待ちください。
 
 ## 対応マイコンとコード
 対応マイコンボードとして、ATOM LiteとATOM S3を想定しています。
+
 ATOM Liteをご使用の際には、Atom/maqueen_urosを、ATOM S3をご使用の際には、Atom/maqueen_uros_AtomS3をそれぞれご使用ください。
 
 ## 対応ロボットとコード
 対応ロボットとして、Maqueen Lite、Maqueen Pro V1、Maqueen Pro V2を想定しています。
+
 それぞれの違いは、モータの回転方向を表すCW・CCWに格納されている数値の違いです。
+
 最近発売された、Maqueen Pro V3、Maqueen Lite V5については動作確認を行っておりませんが、
 従来製品と同様、CW・CCWの数値を変えることでモータを制御することができるものと考えられます。
 
