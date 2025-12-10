@@ -9,7 +9,9 @@
 ATOM Liteをご使用の際には、Atom/maqueen_urosを、ATOM S3をご使用の際には、Atom/maqueen_uros_AtomS3をそれぞれご使用ください。
 
 ## 対応ロボットとコード
-対応ロボットとして、Maqueen Lite、Maqueen Pro V1、Maqueen Pro V2を想定しています。
+対応ロボットとして、Maqueen Lite、Maqueen Plus V1、Maqueen Plus V2を想定しています。
+
+それぞれ、maqueen_lite.hまたはmaqueen_plus.hをインクルードし、MaqueenLiteクラスまたはMaqueenPlusクラスのインスタンスを生成して、使用します。
 
 それぞれの違いは、モータの回転方向を表すCW・CCWに格納されている数値の違いです。
 
