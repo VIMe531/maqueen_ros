@@ -39,6 +39,8 @@ ROS2パッケージをビルドします。使用するのは、joystick_control
 ```
 cd ~/ros2_ws
 colcon build --packages-select joystick_control
+source install/setup.bash
+source /opt/ros/humble/setup.bash
 ```
 
 ## 使い方
