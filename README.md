@@ -1,7 +1,7 @@
 # maqueen_ros
 スイッチサイエンスマガジンの、[こちらの記事](https://www.switch-science.com/blogs/magazine/maqueen-m5stack-ros2 "ssci magazine")にて使用されているコードです。
 
-maqueen_autoとmaqueen_tfはros2パッケージであるため、ros2ワークスペースのsrcフォルダ内にクローンしてください。
+joystick_controlとmaqueen_auto、maqueen_tfはros2パッケージであるため、ros2ワークスペースのsrcフォルダ内にクローンしてください。
 また、joystick_controlをサブモジュールとして含んでいるため、--recursiveオプションをつけてクローンすることをお勧めします。
 
 第1回では、Atomディレクトリ内のコードを使用しています。他ディレクトリは作業中です。気長にお待ちください。
