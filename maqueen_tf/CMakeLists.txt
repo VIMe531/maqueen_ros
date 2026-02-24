@@ -27,13 +27,13 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(maqueen_plusV2_tf_node src/maqueen_plusV2_tf_node.cpp)
-add_executable(maqueen_lite_tf_node src/maqueen_lite_tf_node.cpp)
-ament_target_dependencies(maqueen_plusV2_tf_node rclcpp geometry_msgs sensor_msgs tf2 tf2_ros tf2_geometry_msgs nav_msgs)
-ament_target_dependencies(maqueen_lite_tf_node rclcpp geometry_msgs sensor_msgs tf2 tf2_ros tf2_geometry_msgs nav_msgs)
+# add_executable(maqueen_plusV2_tf_node src/maqueen_plusV2_tf_node.cpp)
+add_executable(imu_to_odom_node src/imu_to_odom_node.cpp)
+# ament_target_dependencies(maqueen_plusV2_tf_node rclcpp geometry_msgs sensor_msgs tf2 tf2_ros tf2_geometry_msgs nav_msgs)
+ament_target_dependencies(imu_to_odom_node rclcpp geometry_msgs sensor_msgs tf2 tf2_ros tf2_geometry_msgs nav_msgs)
 
-install(TARGETS maqueen_plusV2_tf_node DESTINATION lib/${PROJECT_NAME})
-install(TARGETS maqueen_lite_tf_node DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS maqueen_plusV2_tf_node DESTINATION lib/${PROJECT_NAME})
+install(TARGETS imu_to_odom_node DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 

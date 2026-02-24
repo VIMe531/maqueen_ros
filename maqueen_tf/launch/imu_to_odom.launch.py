@@ -5,8 +5,8 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='maqueen_tf',
-            executable='maqueen_lite_tf_node',
-            name='maqueen_lite_tf',
+            executable='imu_to_odom_node',
+            name='imu_to_odom',
             output='screen',
         ),
 
